@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/images/ieee-potrait logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <title>IEEE IARE Update Events</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Artifika&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      body {
+        width: 100%;
+        height: fit-content;
+        margin: 0;
+        padding: 0;
+        background: url(/images/back.jpg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      .form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 150px;
+        padding-top: 50px;
+      }
+      form {
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        border: 1px solid rgb(233, 233, 233);
+        width: 250px;
+        padding: 0% 40px;
+        border-radius: 3mm;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.027);
+      }
+      form .logo img {
+        width: 150px;
+      }
+      .inputs {
+        width: 250px;
+        height: 30px;
+        background: rgba(206, 229, 255, 0.651);
+        border: none;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.125);
+        border-radius: 5mm;
+        padding: 0 10px;
+        font-family: Catamaran;
+        font-size: medium;
+      }
+      select {
+        height: 31px;
+        width: 265px;
+        background: rgba(206, 229, 255, 0.651);
+        border: none;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.125);
+        border-radius: 5mm;
+        padding: 0 10px;
+        font-family: Catamaran;
+        font-size: medium;
+      }
+      button {
+        width: 250px;
+        font-size: larger;
+        font-family: Catamaran;
+        background: rgb(68, 68, 68);
+        color: white;
+        outline: none;
+        border: none;
+        border-radius: 5mm;
+        cursor: pointer;
+      }
+      button:hover {
+        background: rgb(29, 29, 29);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <form action="/eventlogin" method="post">
+        <div class="logo">
+          <img src="/images/IEEE LOGO.png" alt="logo" />
+        </div>
+        <input
+          type="text"
+          name="Name"
+          id=""
+          placeholder="Username"
+          class="inputs"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id=""
+          placeholder="Password"
+          class="inputs"
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <footer>
+      <div class="footerclass">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+        </div>
+        <ul class="social_media">
+          <li>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="mail-open-outline"></ion-icon></a>
+          </li>
+        </ul>
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/members">Members</a></li>
+          <!--<li><a href="CS_E.html">CS E</a></li>
+        <li><a href="CS_M.html">CS M</a></li>
+        <li><a href="WIE_E.html">WIE E</a></li>
+        <li><a href="WIE_M.html">WIE M</a></li>-->
+        </ul>
+        <p>
+          Copyright ©
+          <script>
+            var CurrentYear = new Date().getFullYear();
+            document.write(CurrentYear);
+          </script>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
