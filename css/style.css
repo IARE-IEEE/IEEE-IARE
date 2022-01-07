@@ -45,6 +45,7 @@ body {
   margin-top: 5px;
   position: relative;
   overflow-y: hidden;
+  flex-wrap: wrap;
 }
 .leftIeeesb {
   display: flex;
@@ -141,7 +142,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0;
   width: 85vw;
   padding: 10px 0;
@@ -164,6 +165,8 @@ body {
   width: 370px;
   justify-content: space-between;
   align-self: flex-start;
+  margin: 0 20px;
+  text-align: justify;
 }
 .content .Title h1 {
   font-family: "Artifika", serif;
@@ -191,6 +194,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 0;
+  margin: 0 20px;
 }
 .logos .Logo-Center {
   width: 120px;
@@ -599,4 +603,18 @@ footer .wave#wave3 {
   width: 450px;
   color: transparent;
   opacity: 0;
+}
+@media all and (max-width: 700px) {
+  .logos li .imag {
+    display: none;
+  }
+  .logos {
+    height: fit-content;
+  }
+  .midIeeesb {
+    display: none;
+  }
+  .leftIeeesb img {
+    width: 150px;
+  }
 }
