@@ -28,6 +28,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Catamaran;
+  width: 100vw;
+  overflow-x: hidden;
 }
 .IEEESB {
   display: flex;
@@ -39,7 +41,7 @@ body {
   -webkit-backdrop-filter: blur(3px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   width: 98vw;
   margin-left: 0.5vw;
   margin-top: 5px;
@@ -104,14 +106,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  padding: 50px 0;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
 }
-.Nav-Icon {
+.Nav-Icon,
+.Nav-Icon2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 0.25s;
 }
-.Nav-Icon a {
+.Nav-Icon .nav-but,
+.Nav-Icon2 .nav-but {
   text-decoration: none;
   width: 55px;
   height: 55px;
@@ -123,19 +131,34 @@ body {
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #00008b;
+  text-align: center;
 }
-.Nav-Icon a:hover {
+.Nav-Icon .nav-but:hover,
+.Nav-Icon2 .nav-but:hover {
   background: dodgerblue;
   box-shadow: 0 0 1px rgb(106, 198, 255), 0 0 3px rgb(106, 198, 255),
     0 0 5px rgb(106, 198, 255), 0 0 7px rgb(106, 198, 255),
     0 0 10px rgb(106, 198, 255);
   color: white;
 }
-.Nav-Icon a span {
+.Nav-Icon .nav-but span {
   line-height: 55px;
   text-align: center;
   width: 100%;
   font-size: 30px;
+}
+.Nav-Icon2 .nav-but span {
+  font-size: 22px;
+  text-align: center;
+  line-height: 55px;
+}
+.Nav-Icon2 {
+  position: absolute;
+  top: 0;
+  margin: auto;
+  opacity: 0;
+  z-index: -1;
+  margin-top: 20px;
 }
 .box {
   position: relative;
@@ -164,7 +187,7 @@ body {
   flex-direction: column;
   width: 420px;
   justify-content: space-between;
-  align-self: flex-start;
+  align-self: center;
   margin: 0 20px;
   text-align: justify;
 }
@@ -197,8 +220,8 @@ body {
   margin: 0 20px;
 }
 .logos .Logo-Center {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 
   display: flex;
@@ -223,35 +246,35 @@ body {
     0 0 10px rgb(106, 198, 255);
 }
 .logos li img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 .logos li {
   position: absolute;
   list-style: none;
-  left: 15px;
-  transform-origin: 235px;
+  left: 50px;
+  transform-origin: 200px;
   animation: animate1 1s ease-in;
-  transform: rotate(calc(360deg / 3 * var(--i)));
+  transform: rotate(calc(360deg / 5 * var(--i)));
 }
 @keyframes animate1 {
   0% {
-    transform: rotate(calc(0deg / 3 * var(--i)));
+    transform: rotate(calc(0deg / 5 * var(--i)));
   }
   100% {
-    transform: rotate(calc(360deg / 3 * var(--i)));
+    transform: rotate(calc(360deg / 5 * var(--i)));
   }
 }
 .logos li .imag {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 5px 5px 0 rgba(71, 71, 71, 0.37);
-  transform: rotate(calc(360deg / -3 * var(--i)));
+  transform: rotate(calc(360deg / -5 * var(--i)));
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
 }
@@ -263,6 +286,12 @@ body {
 }
 #imag3 {
   background: rgba(231, 128, 252, 0.432);
+}
+#imag4 {
+  background: rgba(232, 255, 201, 0.623);
+}
+#imag5 {
+  background: rgba(255, 168, 194, 0.329);
 }
 
 /* (IEEE, CS, WIE) (Events, Members) */
@@ -387,10 +416,13 @@ body {
   margin: auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 nav {
   flex: 1;
-  padding-left: 60px;
+}
+nav ul {
+  padding: 0;
 }
 nav ul li {
   display: inline-block;
@@ -465,8 +497,9 @@ footer .wave#wave3 {
 .menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-left: 0;
+  flex-wrap: wrap;
 }
 .social_media li,
 .menu li {
@@ -631,6 +664,18 @@ footer .wave#wave3 {
   padding: 10px;
   width: 600px;
 }
+.expand {
+  color: #00008b;
+}
+.expand:hover {
+  color: white;
+}
+.branches {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
 @media all and (max-width: 700px) {
   .logos li .imag {
     display: none;
@@ -646,5 +691,28 @@ footer .wave#wave3 {
   }
   .slidertext {
     display: none;
+  }
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .Nav-Icon .nav-but,
+  .Nav-Icon2 .nav-but {
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+  }
+  .Nav-Icon .nav-but span {
+    line-height: 40px;
+    text-align: center;
+    font-size: 25px;
+  }
+  .Nav-Icon2 .nav-but span {
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .Nav-Icon2 {
+    margin-top: 25px;
   }
 }
