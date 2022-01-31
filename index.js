@@ -73,3 +73,15 @@ app.post("/eventlogin", urlencodedParser, function (req, res) {
 app.get("/events.update", function (req, res) {
   res.render("EventUpdatelogin");
 });
+
+app.get("/wie", function (req, res) {
+  res.render("wie");
+});
+
+app.get("/cs", function (req, res) {
+  res.render("cs");
+});
+
+app.get("/sps", function (req, res) {
+  res.render("sps");
+});

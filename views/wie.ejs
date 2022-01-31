@@ -1,0 +1,393 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women in Engineering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+    </style>
+    <link
+      rel="shortcut icon"
+      href="/images/Women Engineering logo.svg"
+      type="image/x-icon"
+    />
+    <style>
+      :root {
+        --mount-meadow: #702f8a;
+        --white-smoke: #f0f0f0;
+        --night-rider: #343434;
+        --black: #191b17;
+        --transition: all 0.5s ease-in-out;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        color: var(--black);
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.5;
+        text-rendering: optimizelegibility;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Lato;
+      }
+      img {
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: var(--black);
+      }
+      .container {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0.6rem 0;
+        line-height: 1.25;
+        font-weight: 400;
+        text-transform: capitalize;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section {
+        padding: 6.5rem 0;
+      }
+      .header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url(https://www.techrepublic.com/a/hub/i/r/2020/11/01/9a5e16e2-6f9d-4abd-aa8b-969b04f41e7a/resize/770x/3b50087cf12a16cea5870b6937b402fe/istock-1146418040.jpg);
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+      }
+      .navbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 25px;
+        width: 100%;
+        background-color: #702f8a;
+        z-index: 999;
+        color: white;
+      }
+      .navbar-brand {
+        font-weight: 500;
+        color: white;
+      }
+      .hero-div {
+        flex: 1;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 300px;
+      }
+      .hero-div h1 {
+        font-size: 2.55rem;
+        padding-bottom: 0.4rem;
+      }
+      .detail {
+        background: whitesmoke;
+      }
+      .detail-item {
+        background: #fff;
+        box-shadow: 0 1px 2px rgba(90, 91, 95, 0.1);
+        -webkit-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+        -moz-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+        margin: 2rem 0;
+        padding: 3.5rem 1.5rem;
+        border-radius: 4px;
+        transition: var(--transition);
+      }
+      .detail-item:hover {
+        -webkit-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+        -moz-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+        box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+        transform: translateY(-5px);
+      }
+      .detail-item span {
+        font-size: 2.5rem;
+      }
+      .detail-item h2 {
+        font-size: 1.4 rem;
+        opacity: 0.8;
+        font-weight: 300;
+      }
+      .line {
+        width: 45px;
+        margin: 1.2rem auto;
+        background: var(--mount-meadow);
+        height: 2.5px;
+      }
+      button {
+        background: purple;
+        color: white;
+        font-size: 20px;
+      }
+      footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: #702f8a;
+      }
+      footer .content {
+        max-width: 1150px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      footer .content p,
+      a {
+        color: #fff;
+      }
+      footer .content .box {
+        width: 33%;
+        transition: all 0.4s ease;
+      }
+      footer .content .topic {
+        font-size: 22px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+      footer .content p {
+        text-align: justify;
+      }
+      footer .content .lower .topic {
+        margin: 24px 0 5px 0;
+      }
+      footer .content .lower i {
+        padding-right: 16px;
+      }
+      footer .content .middle {
+        padding-left: 80px;
+      }
+      footer .content .middle a {
+        line-height: 32px;
+      }
+      footer .content .right input[type="text"] {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        color: #d9d9d9;
+        background: #000;
+        border-radius: 5px;
+        padding-left: 10px;
+        font-size: 17px;
+        border: 2px solid #222222;
+      }
+      footer .content .right input[type="submit"] {
+        height: 42px;
+        width: 100%;
+        font-size: 18px;
+        color: #d9d9d9;
+        background: #eb2f06;
+        outline: none;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        margin-top: 12px;
+        border: 2px solid #eb2f06;
+        transition: all 0.3s ease-in-out;
+      }
+      .content .right input[type="submit"]:hover {
+        background: none;
+        color: #eb2f06;
+      }
+      footer .content .media-icons a {
+        font-size: 16px;
+        height: 45px;
+        width: 45px;
+        display: inline-block;
+        text-align: center;
+        line-height: 43px;
+        border-radius: 5px;
+        border: 2px solid #222222;
+        margin: 30px 5px 0 0;
+        transition: all 0.3s ease;
+      }
+      .content .media-icons a:hover {
+        border-color: #eb2f06;
+      }
+      footer .bottom {
+        width: 100%;
+        text-align: right;
+        color: #d9d9d9;
+        padding: 0 40px 5px 0;
+      }
+      footer .bottom a {
+        color: #eb2f06;
+      }
+      footer a {
+        transition: all 0.3s ease;
+      }
+      footer a:hover {
+        color: #eb2f06;
+      }
+      @media (max-width: 1100px) {
+        footer .content .middle {
+          padding-left: 50px;
+        }
+      }
+      @media (max-width: 950px) {
+        footer .content .box {
+          width: 50%;
+        }
+        .content .right {
+          margin-top: 40px;
+        }
+      }
+      @media (max-width: 560px) {
+        footer {
+          position: relative;
+        }
+        footer .content .box {
+          width: 100%;
+          margin-top: 30px;
+        }
+        footer .content .middle {
+          padding-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!---header--->
+    <header class="header" id="intro">
+      <nav class="navbar">
+        <div class="container">
+          <div class="brand-and-toggler">
+            <a href="index.html" class="navbar-brand"
+              >IARE-IEEE Women In Engineering- A society to uplift women</a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="hero-div center container">
+        <h1>
+          "I believe in the unlimited power of women in the context of Science
+          and Engineering" -Elizabeth Holmes
+        </h1>
+      </div>
+    </header>
+    <section class="detail">
+      <div class="container">
+        <div class="row">
+          <div class="detail-item">
+            <span><i class="fas fa-tablet-alt"></i></span>
+            <h2>About Us</h2>
+            <div class="line"></div>
+            <p class="text">
+              The WIE Women In Engineering is dedicated to the uplifting of
+              women engineers and scientists.<br />
+              Our aim is to bring out talented women from the professional
+              industry to help them fulfil their future endeavours. We are a
+              society to provide a support system, elevate and inspire women
+              engineers. Events and sessions are conducted to bring the best
+              skills out of them. Motivational sessions are also conducted to
+              provide support and inspiration.
+            </p>
+          </div>
+          <div class="detail-item">
+            <span><i class="far fa-bell"></i></span>
+            <h2>Goals</h2>
+            <div class="line"></div>
+            <p class="text">
+              The IEEE-IARE WIE aims to elevate the number of women in the
+              technology industry:<br />
+              Our goals are: <br />
+              <li>Uplift the work of women engineers and scientists.</li>
+              <br />
+              <li>Promote the projects of these women.</li>
+              <br />
+              <li>
+                Build a support system to provide networking and other aspects.
+              </li>
+              <br />
+              <li>Inspire the girls to work for their dreams.</li>
+            </p>
+          </div>
+          <div class="detail-item">
+            <span><i class="fas fa-tablet-alt"></i></span>
+            <h2>IEEE WIE</h2>
+            <div class="line"></div>
+            <p class="text">
+              IEEE WIE is one of the world's leaders in changing the face of
+              engineering. Our global network connects over 30,000 members in
+              over 100 countries to advance women in technology at all points in
+              their lives and careers. IEEE WIE members make lifelong
+              friendships, acquire influential mentors, and make a difference
+              for the benefit of humanity.
+            </p>
+            <br /><a href="https://wie.ieee.org/"
+              ><button>Learn more</button></a
+            >
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="lower">
+              <div class="topic">Contact us</div>
+              <div class="instagram">
+                <a href="https://instagram.com"
+                  ><i class="fas fa-phone-volume"></i>wie.iare</a
+                >
+              </div>
+              <div class="email">
+                <a href="mailto:wieieee.iare@gmail.com"
+                  ><i class="fas fa-envelope"></i>wieieee.iare@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <div class="topic">Location</div>
+            <div>
+              <a href="https://googlemaps.com"
+                >Institute of Aeronautical Engineering</a
+              >
+            </div>
+            <div><a href="https://googlemaps.com">Dundigal, Hyderabad.</a></div>
+          </div>
+          <div class="right box">
+            <div class="topic">Get in touch with us!</div>
+            <form action="#">
+              <input type="text" placeholder="Enter email address" />
+              <input type="submit" name="" value="Send" />
+            </form>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
